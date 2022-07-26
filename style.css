@@ -1,0 +1,94 @@
+body {
+    margin-top: 5%;
+    background-color: rgb(8, 0, 0);
+}
+
+#clockcontainer {
+    position: relative;
+    margin: auto;
+    height: 25vw;
+    width: 25vw;
+    background: url(analog.png) no-repeat;
+    background-size: 100%;
+    box-shadow: inset 25px 25px 75px rgba(0, 0, 0, 0.16),
+        10px 10px 70px rgba(0, 0, 0, 0.16),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+        inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+    border-radius: 10%;
+}
+
+#hour,
+#minute,
+#second {
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour {
+    width: 1.8%;
+    height: 19%;
+    top: 31%;
+    left: 48.69%;
+    opacity: 0.8;
+}
+
+#minute {
+    width: 1.6%;
+    height: 28%;
+    top: 22%;
+    left: 48.77%;
+    opacity: 0.8;
+
+}
+
+#second {
+    width: 1%;
+    height: 47%;
+    top: 4%;
+    left: 49.29%;
+    opacity: 0.8;
+
+}
+
+
+.gradiant-box {
+    height: 42px;
+    width: 250px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 8px 7px;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 5px;
+    box-shadow: inset 25px 25px 75px rgba(255, 255, 255, 0.16),
+        animation: animate 1.5s linear infinite;
+
+}
+
+.gradiant-box #digital {
+    position: absolute;
+    height: 43px;
+    width: 250px;
+    display: grid;
+    justify-content: center;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.gradiant-box #digital #time {
+    font-size: 2.5rem;
+    font-family: 'Bahnschrift SemiCondensed';
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+
+}
